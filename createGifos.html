@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GIFOS</title>
+    <link rel="shortcut icon" href="img/logo-mobile-modo-noct-01.png" />
+    <link rel="stylesheet" href="css/styles.min.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div class="line"></div>
+    <header>
+      <div class="containerHeader">
+        <a href="index.html"
+          ><img class="imgLogo" src="img/logo-mobile.png" alt="logo"
+        /></a>
+        <img src="img/burger.svg" alt="burger-mobile" class="menu" />
+      </div>
+      <nav class="nav">
+        <ul>
+          <li>
+            <a id="modoDark" href="#">Modo Nocturno</a>
+            <div class="lineNav"></div>
+          </li>
+          <li>
+            <a id="favoritos" href="fav.html">Favoritos</a>
+            <div class="lineNav"></div>
+          </li>
+          <li>
+            <a href="gifos.html">Mis GIFOS</a>
+            <div class="lineNav"></div>
+          </li>
+          <li id="btnCreateGif">
+            <a href="createGifos.html">
+              <img src="img/CTA-crear-gifo-active.svg" alt="btnCrearGif" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="createGifo">
+        <div class="createDiv">
+          <div class="containerCamera">
+            <img id="camera" src="img/camara.svg" alt="" />
+            <img src="img/element-luz-camara.svg" alt="" />
+          </div>
+          <div class="spaceCamera">
+            <h2 id="title">Aquí podrás crear tus propios <span>GIFOS</span></h2>
+            <p id="paragraph1">¡Crea tu GIFO en sólo 3 pasos!</p>
+            <p id="paragraph2">(sólo necesitas una cámara para grabar un video)</p>
+            <video id="video" class="display-none" src=""></video>
+          </div>
+        </div>
+
+        <div class="createNumbers">
+          <div class="numbers">
+            <img class="movement" src="img/pelicula.svg" alt="LogoPelicula" />
+            <div id="number1" class="number">1</div>
+            <div id="number2" class="number">2</div>
+            <div id="number3" class="number">3</div>
+          </div>
+          <div class="lineCreate"></div>
+          <div class="btnStart" id="btnStart"><a href="">COMENZAR</a></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div id="redes">
+        <p>Compartir en:</p>
+        <a href="https://www.facebook.com/" target="_blank">
+          <img id="facebook" src="img/icon_facebook.svg" alt="icon_facebook" />
+        </a>
+        <a href="https://twitter.com/" target="_blank">
+          <img id="twitter" src="img/icon-twitter.svg" alt="icon_facebook" />
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+          <img
+            id="instagram"
+            src="img/icon_instagram.svg"
+            alt="icon_facebook"
+          />
+        </a>
+      </div>
+      <p id="derechosR">© GIFOS 2020 All Rights Reserved.</p>
+    </footer>
+
+    <div class="line"></div>
+
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+
+    <script src="js/functions.js"></script>
+    <script src="js/burgerMenu.js"></script>
+    <script src="js/darkMode.js"></script>
+    <script src="js/createGifs.js"></script>
+  </body>
+</html>

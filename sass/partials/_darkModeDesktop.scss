@@ -1,0 +1,214 @@
+/********************************VARIABLES***************************************/
+$black: #000000;
+$white: #ffffff;
+$purple: #572ee5;
+$grayLight: #37383c;
+$grayDark: #222326;
+$aqua: #50e3c2;
+
+/********************************body***************************************/
+@media (min-width: 768px) {
+  body.dark {
+    background: $grayLight;
+    transition: 1s ease all;
+    .line {
+      background: $black;
+      transition: 1s ease all;
+    }
+
+    /********************************header***************************************/
+    header {
+      transition: 1s ease all;
+      .containerHeader {
+        .imgLogo {
+          content: url("/img/Logo-modo-noc-01.png");
+        }
+      }
+      .nav {
+        transition: 1s ease all;
+        background: $grayLight;
+        ul {
+          li,
+          a {
+            color: $white;
+            &:active {
+              color: #9cafc3;
+            }
+          }
+          #btnCreateGif a img {
+            content: url("/img/CTA-crear-gifo-modo-noc.svg");
+            &:hover {
+              content: url("/img/CTA-crear-gifo-hover-modo-noc.svg");
+            }
+            &:active {
+              content: url("/img/CTA-crear-gifo-active-modo-noc.svg");
+            }
+          }
+        }
+      }
+    }
+
+    main {
+      transition: 1s ease all;
+      /********************************createGifos***************************************/
+      .createGifo {
+        .containerCamera {
+          #camera {
+            content: url("/img/camara-modo-noc.svg");
+          }
+        }
+        .spaceCamera {
+          border: 1px solid $white;
+          h2,
+          p {
+            color: $white;
+          }
+        }
+        .createNumbers {
+          .number {
+            border: 1px solid $white;
+            color: $white;
+          }
+          img {
+            content: url("/img/pelicula-modo-noc.svg");
+          }
+          .lineCreate {
+            background: $white;
+          }
+          .btnStart {
+            border: 1px solid $white;
+            a {
+              color: $white;
+            }
+          }
+        }
+      }
+
+      /********************************Fav***************************************/
+      .heart-title h1 {
+        color: $white;
+      }
+
+      .favoritos {
+        .btnSeeMore {
+          border: 1px solid $white;
+          a {
+            color: $white;
+          }
+        }
+        .btnSeeMore:hover {
+          border: 1px solid $white;
+          background: $white;
+          a {
+            color: $black;
+          }
+        }
+      }
+      /********************************Gifos***************************************/
+      .face-title h1 {
+        color: $white;
+      }
+
+      .misGifos {
+        .btnSeeMore {
+          border: 1px solid $white;
+          a {
+            color: $white;
+          }
+        }
+        .btnSeeMore:hover {
+          border: 1px solid $white;
+          background: $white;
+          a {
+            color: $black;
+          }
+        }
+      }
+      /********************************Index***************************************/
+      .search-section {
+        .containerTitleImg {
+          h1 {
+            color: $white;
+          }
+        }
+        .containerInput {
+          #input {
+            border: 1px solid $white;
+            background: $grayLight;
+            color: $white;
+            #input::placeholder {
+              color: $white;
+            }
+          }
+          .lupa {
+            content: url("/img/icon-search-mod-noc.svg");
+          }
+        }
+      }
+      .gifs-section {
+        .line {
+          border: 1px solid $white;
+          background: $white;
+        }
+        #valueSearch {
+          color: $white;
+        }
+        #btnSeeMore {
+          border: 1px solid $white;
+          a {
+            color: $white;
+          }
+        }
+        #btnSeeMore:hover {
+          border: 1px solid $white;
+          background: $white;
+          a {
+            color: $black;
+          }
+        }
+      }
+      .suggestions-section {
+        color: $white;
+      }
+      .trending-section {
+        background: $grayDark;
+        h2,
+        p {
+          color: $white;
+        }
+        #gifsTrending {
+          .containerArrow {
+            img#izq {
+              content: url("/img/button-slider-left-md-noct.svg");
+              // &:hover {
+              //   content: url('../../img/button-slider-left-hover.svg');
+              // }
+            }
+            img#der {
+              content: url("/img/button-slider-right-md-noct.svg");
+              // &:hover {
+              //   content: url("/img/Button-Slider-right-hover-modo-noct-01.svg");
+              // }
+            }
+          }
+        }
+      }
+    }
+    footer {
+      transition: 1s ease all;
+      #redes {
+        a {
+          #facebook:hover {
+            content: url("/img/icon_facebook_noc.svg");
+          }
+          #twitter:hover {
+            content: url("/img/icon_twitter_noc.svg");
+          }
+          #instagram:hover {
+            content: url("/img/icon_instagram_noc.svg");
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1218 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: content-box;
+}
+
+.display-none {
+  display: none;
+}
+
+body .hoverImg {
+  display: none;
+}
+
+body .hoverImg .icons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+body .hoverImg .icons > img {
+  padding: 3px;
+  margin: 5px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.7;
+  background: #ffffff;
+  border-radius: 6px;
+}
+
+body .hoverImg .icons > img:hover {
+  opacity: 1;
+}
+
+body .hoverImg .icons #iconFav {
+  padding: 6px;
+  width: 25px;
+  height: 25px;
+}
+
+body .hoverImg .infoGif {
+  margin: 0 0 20px 18px;
+}
+
+body .hoverImg .infoGif p {
+  display: flex;
+  font-family: "Roboto", Bold;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: left;
+}
+
+body .containerGif {
+  padding: 10.5px;
+  position: relative;
+}
+
+body .containerGif:hover .hoverImg {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  opacity: 0.7;
+  background: #572ee5;
+  width: 260px;
+  height: 200px;
+}
+
+body .containerGif #imgGif {
+  width: 260px;
+  height: 200px;
+  object-fit: fill;
+}
+
+/********************************VARIABLES***************************************/
+/********************************body***************************************/
+body.dark {
+  background: #37383c;
+  transition: 1s ease all;
+  /********************************header***************************************/
+}
+
+body.dark .line {
+  background: #000000;
+  transition: 1s ease all;
+}
+
+body.dark header {
+  transition: 1s ease all;
+}
+
+body.dark header .containerHeader .imgLogo {
+  content: url("/img/logo-mobile-modo-noct-01.png");
+}
+
+body.dark header .nav {
+  z-index: 3;
+  transition: 1s ease all;
+  background: #000000;
+}
+
+body.dark main {
+  transition: 1s ease all;
+  /********************************Fav***************************************/
+  /********************************Gifos***************************************/
+  /********************************Index***************************************/
+}
+
+body.dark main .heart-titel h1 {
+  color: #ffffff;
+}
+
+body.dark main .favoritos .btnSeeMore {
+  border: 1px solid #ffffff;
+}
+
+body.dark main .favoritos .btnSeeMore a {
+  color: #ffffff;
+}
+
+body.dark main .face-title h1 {
+  color: #ffffff;
+}
+
+body.dark main .misGifos .btnSeeMore {
+  border: 1px solid #ffffff;
+}
+
+body.dark main .misGifos .btnSeeMore a {
+  color: #ffffff;
+}
+
+body.dark main .search-section .containerTitleImg h1 {
+  color: #ffffff;
+}
+
+body.dark main .search-section .containerInput #input {
+  border: 1px solid #ffffff;
+  background: #37383c;
+  color: #ffffff;
+}
+
+body.dark main .search-section .containerInput #input #input::placeholder {
+  color: #ffffff;
+}
+
+body.dark main .search-section .containerInput .lupa {
+  content: url("/img/icon-search-mod-noc.svg");
+}
+
+body.dark main .gifs-section .line {
+  border: 1px solid #ffffff;
+  background: #ffffff;
+}
+
+body.dark main .gifs-section #valueSearch {
+  color: #ffffff;
+}
+
+body.dark main .gifs-section #btnSeeMore {
+  border: 1px solid #ffffff;
+}
+
+body.dark main .gifs-section #btnSeeMore a {
+  color: #ffffff;
+}
+
+body.dark main .suggestions-section h2,
+body.dark main .suggestions-section a {
+  color: #ffffff;
+}
+
+body.dark main .trending-section {
+  background: #222326;
+}
+
+body.dark main .trending-section h2,
+body.dark main .trending-section p {
+  color: #ffffff;
+}
+
+body.dark footer {
+  transition: 1s ease all;
+  color: #ffffff;
+}
+
+/********************************VARIABLES***************************************/
+/********************************body***************************************/
+@media (min-width: 768px) {
+  body.dark {
+    background: #37383c;
+    transition: 1s ease all;
+    /********************************header***************************************/
+  }
+  body.dark .line {
+    background: #000000;
+    transition: 1s ease all;
+  }
+  body.dark header {
+    transition: 1s ease all;
+  }
+  body.dark header .containerHeader .imgLogo {
+    content: url("/img/Logo-modo-noc-01.png");
+  }
+  body.dark header .nav {
+    transition: 1s ease all;
+    background: #37383c;
+  }
+  body.dark header .nav ul li,
+  body.dark header .nav ul a {
+    color: #ffffff;
+  }
+  body.dark header .nav ul li:active,
+  body.dark header .nav ul a:active {
+    color: #9cafc3;
+  }
+  body.dark header .nav ul #btnCreateGif a img {
+    content: url("/img/CTA-crear-gifo-modo-noc.svg");
+  }
+  body.dark header .nav ul #btnCreateGif a img:hover {
+    content: url("/img/CTA-crear-gifo-hover-modo-noc.svg");
+  }
+  body.dark header .nav ul #btnCreateGif a img:active {
+    content: url("/img/CTA-crear-gifo-active-modo-noc.svg");
+  }
+  body.dark main {
+    transition: 1s ease all;
+    /********************************createGifos***************************************/
+    /********************************Fav***************************************/
+    /********************************Gifos***************************************/
+    /********************************Index***************************************/
+  }
+  body.dark main .createGifo .containerCamera #camera {
+    content: url("/img/camara-modo-noc.svg");
+  }
+  body.dark main .createGifo .spaceCamera {
+    border: 1px solid #ffffff;
+  }
+  body.dark main .createGifo .spaceCamera h2,
+  body.dark main .createGifo .spaceCamera p {
+    color: #ffffff;
+  }
+  body.dark main .createGifo .createNumbers .number {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+  }
+  body.dark main .createGifo .createNumbers img {
+    content: url("/img/pelicula-modo-noc.svg");
+  }
+  body.dark main .createGifo .createNumbers .lineCreate {
+    background: #ffffff;
+  }
+  body.dark main .createGifo .createNumbers .btnStart {
+    border: 1px solid #ffffff;
+  }
+  body.dark main .createGifo .createNumbers .btnStart a {
+    color: #ffffff;
+  }
+  body.dark main .heart-title h1 {
+    color: #ffffff;
+  }
+  body.dark main .favoritos .btnSeeMore {
+    border: 1px solid #ffffff;
+  }
+  body.dark main .favoritos .btnSeeMore a {
+    color: #ffffff;
+  }
+  body.dark main .favoritos .btnSeeMore:hover {
+    border: 1px solid #ffffff;
+    background: #ffffff;
+  }
+  body.dark main .favoritos .btnSeeMore:hover a {
+    color: #000000;
+  }
+  body.dark main .face-title h1 {
+    color: #ffffff;
+  }
+  body.dark main .misGifos .btnSeeMore {
+    border: 1px solid #ffffff;
+  }
+  body.dark main .misGifos .btnSeeMore a {
+    color: #ffffff;
+  }
+  body.dark main .misGifos .btnSeeMore:hover {
+    border: 1px solid #ffffff;
+    background: #ffffff;
+  }
+  body.dark main .misGifos .btnSeeMore:hover a {
+    color: #000000;
+  }
+  body.dark main .search-section .containerTitleImg h1 {
+    color: #ffffff;
+  }
+  body.dark main .search-section .containerInput #input {
+    border: 1px solid #ffffff;
+    background: #37383c;
+    color: #ffffff;
+  }
+  body.dark main .search-section .containerInput #input #input::placeholder {
+    color: #ffffff;
+  }
+  body.dark main .search-section .containerInput .lupa {
+    content: url("/img/icon-search-mod-noc.svg");
+  }
+  body.dark main .gifs-section .line {
+    border: 1px solid #ffffff;
+    background: #ffffff;
+  }
+  body.dark main .gifs-section #valueSearch {
+    color: #ffffff;
+  }
+  body.dark main .gifs-section #btnSeeMore {
+    border: 1px solid #ffffff;
+  }
+  body.dark main .gifs-section #btnSeeMore a {
+    color: #ffffff;
+  }
+  body.dark main .gifs-section #btnSeeMore:hover {
+    border: 1px solid #ffffff;
+    background: #ffffff;
+  }
+  body.dark main .gifs-section #btnSeeMore:hover a {
+    color: #000000;
+  }
+  body.dark main .suggestions-section {
+    color: #ffffff;
+  }
+  body.dark main .trending-section {
+    background: #222326;
+  }
+  body.dark main .trending-section h2,
+  body.dark main .trending-section p {
+    color: #ffffff;
+  }
+  body.dark main .trending-section #gifsTrending .containerArrow img#izq {
+    content: url("/img/button-slider-left-md-noct.svg");
+  }
+  body.dark main .trending-section #gifsTrending .containerArrow img#der {
+    content: url("/img/button-slider-right-md-noct.svg");
+  }
+  body.dark footer {
+    transition: 1s ease all;
+  }
+  body.dark footer #redes a #facebook:hover {
+    content: url("/img/icon_facebook_noc.svg");
+  }
+  body.dark footer #redes a #twitter:hover {
+    content: url("/img/icon_twitter_noc.svg");
+  }
+  body.dark footer #redes a #instagram:hover {
+    content: url("/img/icon_instagram_noc.svg");
+  }
+}
+
+/********************************VARIABLES***************************************/
+/********************************body***************************************/
+body {
+  transition: 1s ease all;
+}
+
+.line {
+  width: 100%;
+  height: 5px;
+  background: #572ee5;
+  transition: 1s ease all;
+}
+
+/********************************header***************************************/
+header {
+  transition: 1s ease all;
+}
+
+header .containerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 22px 29px 26px;
+}
+
+header .nav {
+  transition: 1s ease all;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(87, 46, 229, 0.9);
+  position: absolute;
+  margin-top: -15px;
+  z-index: 1;
+}
+
+header .nav.navActivo {
+  display: inline;
+}
+
+header .nav ul {
+  text-align: center;
+  margin-top: 10px;
+}
+
+header .nav ul a {
+  font-family: "Montserrat", Bold;
+  font-size: 15px;
+  color: #ffffff;
+  line-height: 60px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+header .nav ul .lineNav {
+  opacity: 0.5;
+  border-bottom: 1px solid #ffffff;
+  width: 40px;
+  margin: auto;
+}
+
+header .nav ul #btnCreateGif {
+  display: none;
+}
+
+/********************************main***************************************/
+main {
+  transition: 1s ease all;
+  /********************************FOOTER***************************************/
+}
+
+main .search-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .search-section .containerTitleImg h1 {
+  font-family: "Montserrat", Bold;
+  font-size: 25px;
+  color: #572ee5;
+  text-align: center;
+  line-height: 33px;
+  font-weight: 700;
+  margin-bottom: 31px;
+}
+
+main .search-section .containerTitleImg h1 .blueLetter {
+  color: #50e3c2;
+}
+
+main .search-section .containerTitleImg img {
+  width: 100%;
+  height: 130px;
+}
+
+main .search-section .containerInput {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: -5px;
+}
+
+main .search-section .containerInput #input {
+  font-family: "Roboto", Regular;
+  border: 1px solid #572ee5;
+  border-radius: 27px;
+  background: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  margin: 0 20px;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  padding-left: 30px;
+}
+
+main .search-section .containerInput #input #input::placeholder {
+  color: #6b7989;
+}
+
+main .search-section .containerInput .lupa {
+  position: absolute;
+  right: 35px;
+  z-index: 2;
+}
+
+main .suggestions-section {
+  color: #572ee5;
+  text-align: center;
+  line-height: 25px;
+  padding-top: 44px;
+  transition: 1s ease all;
+  margin-bottom: 45px;
+}
+
+main .suggestions-section h2 {
+  font-family: "Montserrat", Bold;
+  font-size: 16px;
+  margin: 0%;
+  font-weight: 700;
+}
+
+main .suggestions-section a {
+  font-family: "Montserrat", Medium;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #572ee5;
+  margin: 0 2px;
+}
+
+main .suggestions-section a:first-child:before {
+  content: '';
+}
+
+main .suggestions-section a::before {
+  content: ', ';
+}
+
+main .gifs-section {
+  display: none;
+}
+
+main .gifs-section.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .gifs-section.active .line {
+  margin: 0 auto;
+  width: 157px;
+  height: 1px;
+  opacity: 50%;
+  border: 1px solid #9cafc3;
+  margin-bottom: 43px;
+}
+
+main .gifs-section.active #valueSearch {
+  font-family: "Montserrat", Bold;
+  font-size: 25px;
+  color: #572ee5;
+  text-align: center;
+  line-height: 40px;
+  margin-bottom: 27.5px;
+}
+
+main .gifs-section.active #containerGifsSearch {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+main .gifs-section.active #containerGifsSearch .containerGif {
+  padding: 0;
+}
+
+main .gifs-section.active #containerGifsSearch .containerGif .hoverImg {
+  width: 136px;
+  height: 120px;
+  margin: 5px;
+}
+
+main .gifs-section.active #containerGifsSearch .containerGif #imgGif {
+  width: 136px;
+  height: 120px;
+  object-fit: fill;
+  margin: 5px;
+}
+
+main .gifs-section.active #btnSeeMore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 90px 0;
+  border: 1px solid #572ee5;
+  border-radius: 25px;
+  width: 127px;
+  height: 50px;
+}
+
+main .gifs-section.active #btnSeeMore a {
+  font-family: "Montserrat", Bold;
+  font-size: 13px;
+  color: #572ee5;
+  letter-spacing: 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+main .trending-section {
+  background: #f3f5f8;
+  align-items: center;
+  text-align: center;
+  padding: 44px 0 82px 22px;
+  transition: 1s ease all;
+}
+
+main .trending-section h2 {
+  font-family: "Montserrat", Bold;
+  font-size: 20px;
+  color: #572ee5;
+  line-height: 30px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  transition: 1s ease all;
+}
+
+main .trending-section p {
+  font-family: "Roboto", Regular;
+  font-size: 16px;
+  color: #000000;
+  line-height: 23px;
+  font-weight: 500;
+  transition: 1s ease all;
+}
+
+main .trending-section #pDesktop {
+  display: none;
+}
+
+main .trending-section #gifsTrending {
+  margin-top: 32px;
+}
+
+main .trending-section #gifsTrending .containerArrow {
+  display: none;
+}
+
+main .trending-section #gifsTrending #containerGifsTrending {
+  display: flex;
+  overflow-x: auto;
+}
+
+main .trending-section #gifsTrending #containerGifsTrending .containerGif .hoverImg {
+  width: 243px;
+  height: 187px;
+}
+
+main .trending-section #gifsTrending #containerGifsTrending .containerGif #imgGif {
+  width: 243px;
+  height: 187px;
+  object-fit: fill;
+}
+
+footer {
+  transition: 1s ease all;
+  font-family: "Roboto", Regular;
+  color: #000000;
+  text-align: center;
+}
+
+footer #redes {
+  margin: 50px 0;
+}
+
+footer #redes p {
+  margin-bottom: 40px;
+  font-size: 15px;
+}
+
+footer #redes a {
+  text-decoration: none;
+  margin: 0 9.5px;
+}
+
+footer #redes a img {
+  width: 18px;
+  height: 18px;
+}
+
+footer #derechosR {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 15px;
+}
+
+/********************************VARIABLES***************************************/
+@media (min-width: 768px) {
+  body {
+    transition: 1s ease all;
+  }
+  .line {
+    width: 100%;
+    height: 5px;
+    background: #572ee5;
+    transition: 1s ease all;
+  }
+  /********************************header***************************************/
+  header {
+    transition: 1s ease all;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 23px 156px 0;
+  }
+  header .containerHeader a .imgLogo {
+    content: url("../img/logo-desktop-01.png");
+  }
+  header .containerHeader .menu {
+    display: none;
+  }
+  header .nav {
+    display: inline-block;
+    position: relative;
+    width: auto;
+    height: auto;
+    background: #ffffff;
+  }
+  header .nav ul {
+    display: flex;
+    margin-top: 40px;
+  }
+  header .nav ul li {
+    list-style: none;
+    margin: 0 25px;
+  }
+  header .nav ul li a {
+    font-size: 13px;
+    font-weight: 700;
+    color: #572ee5;
+    text-transform: uppercase;
+  }
+  header .nav ul li a:hover {
+    text-decoration-line: underline;
+    text-decoration-color: #5ed7c6;
+    text-decoration-thickness: 2px;
+  }
+  header .nav ul li a:active {
+    text-decoration: none;
+    color: #9cafc3;
+  }
+  header .nav ul li .lineNav {
+    display: none;
+  }
+  header .nav ul #btnCreateGif {
+    display: inline;
+  }
+  header .nav ul #btnCreateGif a img:hover {
+    content: url("../img/CTA-crear-gifo-hover.svg");
+  }
+  header .nav ul #btnCreateGif a img:active {
+    content: url("../img/CTA-crear-gifo-active.svg");
+  }
+  main .search-section .containerTitleImg h1 {
+    padding: 5% 285px 24px;
+    font-size: 35px;
+    line-height: 50px;
+  }
+  main .search-section .containerTitleImg img {
+    content: url("../img/ilustra_header.svg");
+    height: 190px;
+  }
+  main .search-section .containerInput {
+    width: 551px;
+    margin: auto;
+  }
+  main .search-section .containerInput #input {
+    margin: -10px auto;
+  }
+  main .search-section .containerInput .lupa {
+    left: 915px;
+  }
+  main .suggestions-section {
+    padding-top: 4.8%;
+    padding-bottom: 6.2%;
+  }
+  main .suggestions-section h2 {
+    font-size: 18px;
+  }
+  main .suggestions-section a {
+    font-size: 16px;
+  }
+  main .gifs-section {
+    display: none;
+  }
+  main .gifs-section.active .line {
+    width: 338px;
+  }
+  main .gifs-section.active #valueSearch {
+    font-size: 35px;
+  }
+  main .gifs-section.active #containerGifsSearch {
+    padding: 0 110px;
+  }
+  main .gifs-section.active #containerGifsSearch .containerGif {
+    padding: 0;
+  }
+  main .gifs-section.active #containerGifsSearch .containerGif .hoverImg {
+    width: 255px;
+    height: 200px;
+    margin: 10px;
+  }
+  main .gifs-section.active #containerGifsSearch .containerGif #imgGif {
+    width: 255px;
+    height: 200px;
+    object-fit: fill;
+    margin: 10px;
+  }
+  main .gifs-section.active #btnSeeMore:hover {
+    background-color: #572ee5;
+  }
+  main .gifs-section.active #btnSeeMore:hover a {
+    color: #ffffff;
+  }
+  main .trending-section {
+    padding-top: 4.4%;
+  }
+  main .trending-section h2 {
+    font-size: 25px;
+  }
+  main .trending-section p {
+    display: none;
+  }
+  main .trending-section #pDesktop {
+    display: inline;
+    font-size: 18px;
+    padding: 12px 0 23px;
+  }
+  main .trending-section #gifsTrending {
+    display: flex;
+    align-items: center;
+  }
+  main .trending-section #gifsTrending .containerArrow {
+    display: inline;
+  }
+  main .trending-section #gifsTrending .containerArrow .arrow {
+    margin: 22px;
+  }
+  main .trending-section #gifsTrending .containerArrow img#izq {
+    content: url("../img/button-slider-left.svg");
+  }
+  main .trending-section #gifsTrending .containerArrow img#izq:hover {
+    content: url("../img/button-slider-left-hover.svg");
+  }
+  main .trending-section #gifsTrending .containerArrow img#der {
+    content: url("../img/button-slider-right.svg");
+  }
+  main .trending-section #gifsTrending .containerArrow img#der:hover {
+    content: url("../img/button-slider-right-hover.svg");
+  }
+  main .trending-section #gifsTrending #containerGifsTrending {
+    margin-top: 53px;
+    overflow: hidden;
+  }
+  main .trending-section #gifsTrending #containerGifsTrending .containerGif .hoverImg {
+    width: 357px;
+    height: 275px;
+  }
+  main .trending-section #gifsTrending #containerGifsTrending .containerGif #imgGif {
+    width: 357px;
+    height: 275px;
+    object-fit: fill;
+  }
+  footer {
+    display: flex;
+    margin: 49.5px 158px 51.5px 186px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer #derechosR {
+    font-size: 13px;
+    line-height: 20px;
+    margin: 0;
+  }
+  footer #redes {
+    display: flex;
+    margin: 0;
+  }
+  footer #redes p {
+    font-size: 13px;
+    margin-bottom: 0;
+  }
+  footer #redes a {
+    margin: 0;
+    padding: 0;
+  }
+  footer #redes a img {
+    width: 18.1px;
+    height: 18.1px;
+    margin: 0 15px;
+  }
+  footer #redes a #facebook:hover {
+    content: url("../img/icon_facebook_hover.svg");
+  }
+  footer #redes a #twitter:hover {
+    content: url("../img/icon-twitter-hover.svg");
+  }
+  footer #redes a #instagram:hover {
+    content: url("../img/icon_instagram-hover.svg");
+  }
+}
+
+/********************************VARIABLES***************************************/
+/********************************MAIN***************************************/
+main .heart-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+main .heart-title h1 {
+  font-family: "Montserrat", Bold;
+  margin: 0%;
+  padding-top: 5px;
+  font-size: 20px;
+  color: #572ee5;
+  text-align: center;
+  line-height: 30px;
+}
+
+main .favoritos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .favoritos .void {
+  display: none;
+}
+
+main .favoritos #containerFavGifs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+main .favoritos #containerFavGifs .containerGif {
+  padding: 0;
+}
+
+main .favoritos #containerFavGifs .containerGif .hoverImg {
+  width: 136px;
+  height: 120px;
+  margin: 5px;
+}
+
+main .favoritos #containerFavGifs .containerGif #imgGif {
+  width: 136px;
+  height: 120px;
+  object-fit: fill;
+  margin: 5px;
+}
+
+main .favoritos .btnSeeMore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 90px 0;
+  border: 1px solid #572ee5;
+  border-radius: 25px;
+  width: 127px;
+  height: 50px;
+}
+
+main .favoritos .btnSeeMore a {
+  font-family: "Montserrat", Bold;
+  font-size: 13px;
+  color: #572ee5;
+  letter-spacing: 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+main .favoritos .btnSeeMore:hover {
+  background-color: #572ee5;
+}
+
+main .favoritos .btnSeeMore:hover a {
+  color: #ffffff;
+}
+
+/********************************VARIABLES***************************************/
+@media (min-width: 768px) {
+  main .heart-title h1 {
+    font-size: 25px;
+    font-weight: 700;
+  }
+  main .favoritos .void {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 80px 0;
+  }
+  main .favoritos .void p {
+    font-family: "Montserrat", Bold;
+    font-size: 22px;
+    color: #50e3c2;
+    line-height: 33px;
+    text-align: center;
+    font-weight: 600;
+    margin: 24px 450px;
+  }
+  main .favoritos #containerFavGifs {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 110px;
+  }
+  main .favoritos #containerFavGifs .containerGif {
+    padding: 0;
+  }
+  main .favoritos #containerFavGifs .containerGif .hoverImg {
+    width: 255px;
+    height: 200px;
+    margin: 10px;
+  }
+  main .favoritos #containerFavGifs .containerGif #imgGif {
+    width: 255px;
+    height: 200px;
+    object-fit: fill;
+    margin: 10px;
+  }
+}
+
+/********************************VARIABLES***************************************/
+/********************************MAIN***************************************/
+main .face-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+main .face-title h1 {
+  font-family: "Montserrat", Bold;
+  padding-top: 5px;
+  margin: 0%;
+  font-size: 20px;
+  color: #572ee5;
+  text-align: center;
+  line-height: 30px;
+}
+
+main .misGifos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .misGifos .void {
+  display: none;
+}
+
+main .misGifos .btnSeeMore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 90px 0;
+  border: 1px solid #572ee5;
+  border-radius: 25px;
+  width: 127px;
+  height: 50px;
+}
+
+main .misGifos .btnSeeMore a {
+  font-family: "Montserrat", Bold;
+  font-size: 13px;
+  color: #572ee5;
+  letter-spacing: 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+main .misGifos .btnSeeMore:hover {
+  background-color: #572ee5;
+}
+
+main .misGifos .btnSeeMore:hover a {
+  color: #ffffff;
+}
+
+/********************************VARIABLES***************************************/
+@media (min-width: 768px) {
+  main .face-title h1 {
+    font-size: 25px;
+    font-weight: 700;
+  }
+  main .misGifos .void {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 80px 0;
+  }
+  main .misGifos .void p {
+    font-family: "Montserrat", Bold;
+    font-size: 22px;
+    color: #50e3c2;
+    line-height: 33px;
+    text-align: center;
+    font-weight: 600;
+    margin: 24px 450px;
+  }
+  main .misGifos .btnSeeMore {
+    display: none;
+  }
+}
+
+@keyframes move {
+  from {
+    transform: translate(0, -400px) rotate(360deg);
+  }
+}
+
+.createGifo .createDiv {
+  display: flex;
+  flex-direction: row;
+  margin-left: 156px;
+}
+
+.createGifo .createDiv .containerCamera {
+  display: flex;
+  align-items: center;
+}
+
+.createGifo .createDiv .spaceCamera {
+  border: 1px solid #572ee5;
+  width: 588px;
+  height: 390px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.createGifo .createDiv .spaceCamera h2 {
+  font-family: "Montserrat", Bold;
+  font-size: 25px;
+  text-align: center;
+  line-height: 35px;
+  color: #572ee5;
+}
+
+.createGifo .createDiv .spaceCamera h2 span {
+  color: #50e3c2;
+}
+
+.createGifo .createDiv .spaceCamera p {
+  font-family: "Roboto", Regular;
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
+  line-height: 29px;
+}
+
+.createGifo .createNumbers {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 24px;
+}
+
+.createGifo .createNumbers .numbers {
+  display: flex;
+  margin-bottom: 19px;
+}
+
+.createGifo .createNumbers .numbers .number {
+  font-family: "Roboto", Medium;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  border: 1px solid #572ee5;
+  background: transparent;
+  color: #572ee5;
+  margin: 0 13px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.createGifo .createNumbers .numbers img {
+  position: absolute;
+  left: 80%;
+  bottom: 60px;
+}
+
+.createGifo .createNumbers .numbers img.movement {
+  animation-duration: 5s;
+  animation-name: move;
+  animation-iteration-count: initial;
+}
+
+.createGifo .createNumbers .lineCreate {
+  width: 795.9px;
+  height: 6.9px;
+  background: #572ee5;
+  transition: 1s ease all;
+  border-radius: 5px;
+}
+
+.createGifo .createNumbers .btnStart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20.1px 0;
+  border: 1px solid #572ee5;
+  border-radius: 25px;
+  width: 127px;
+  height: 50px;
+}
+
+.createGifo .createNumbers .btnStart a {
+  font-family: "Montserrat", Bold;
+  font-size: 13px;
+  color: #572ee5;
+  letter-spacing: 0;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+}
+/*# sourceMappingURL=styles.min.css.map */

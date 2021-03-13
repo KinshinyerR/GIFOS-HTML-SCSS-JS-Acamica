@@ -1,0 +1,54 @@
+/********************************VARIABLES***************************************/
+$black: #000000;
+$white: #ffffff;
+$purple: #572ee5;
+$grayLight: #37383c;
+$grayDark: #222326;
+$aqua: #50e3c2;
+
+@media (min-width: 768px) {
+  main {
+    .heart-title {
+      h1 {
+        font-size: 25px;
+        font-weight: 700;
+      }
+    }
+    .favoritos {
+      .void {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 80px 0;
+        p {
+          font-family: "Montserrat", Bold;
+          font-size: 22px;
+          color: $aqua;
+          line-height: 33px;
+          text-align: center;
+          font-weight: 600;
+          margin: 24px 450px;
+        }
+      }
+      #containerFavGifs {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 110px;
+        .containerGif {
+          padding: 0;
+          .hoverImg {
+            width: 255px;
+            height: 200px;
+            margin: 10px;
+          }
+          #imgGif {
+            width: 255px;
+            height: 200px;
+            object-fit: fill;
+            margin: 10px;
+          }
+        }
+      }
+    }
+  }
+}

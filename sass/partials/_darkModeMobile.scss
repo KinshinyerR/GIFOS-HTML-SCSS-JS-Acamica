@@ -1,0 +1,111 @@
+/********************************VARIABLES***************************************/
+$black: #000000;
+$white: #ffffff;
+$purple: #572ee5;
+$grayLight: #37383c;
+$grayDark: #222326;
+$aqua: #50e3c2;
+
+/********************************body***************************************/
+body.dark {
+  background: $grayLight;
+  transition: 1s ease all;
+  .line {
+    background: $black;
+    transition: 1s ease all;
+  }
+
+  /********************************header***************************************/
+  header {
+    transition: 1s ease all;
+    .containerHeader {
+      .imgLogo {
+        content: url("/img/logo-mobile-modo-noct-01.png");
+      }
+    }
+    .nav {
+      z-index: 3;
+      transition: 1s ease all;
+      background: $black;
+    }
+  }
+
+  main {
+    transition: 1s ease all;
+    /********************************Fav***************************************/
+    .heart-titel h1 {
+      color: $white;
+    }
+
+    .favoritos .btnSeeMore {
+      border: 1px solid $white;
+      a {
+        color: $white;
+      }
+    }
+    /********************************Gifos***************************************/
+    .face-title h1 {
+      color: $white;
+    }
+
+    .misGifos .btnSeeMore {
+      border: 1px solid $white;
+      a {
+        color: $white;
+      }
+    }
+    /********************************Index***************************************/
+    .search-section {
+      .containerTitleImg {
+        h1 {
+          color: $white;
+        }
+      }
+      .containerInput {
+        #input {
+          border: 1px solid $white;
+          background: $grayLight;
+          color: $white;
+          #input::placeholder {
+            color: $white;
+          }
+        }
+        .lupa {
+          content: url("/img/icon-search-mod-noc.svg");
+        }
+      }
+    }
+    .gifs-section {
+      .line {
+        border: 1px solid $white;
+        background: $white;
+      }
+      #valueSearch {
+        color: $white;
+      }
+      #btnSeeMore {
+        border: 1px solid $white;
+        a {
+          color: $white;
+        }
+      }
+    }
+    .suggestions-section {
+      h2,
+      a{
+        color: $white;
+      }
+    }
+    .trending-section {
+      background: $grayDark;
+      h2,
+      p {
+        color: $white;
+      }
+    }
+  }
+  footer {
+    transition: 1s ease all;
+    color: $white;
+  }
+}

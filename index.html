@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GIFOS</title>
+    <link rel="shortcut icon" href="img/logo-mobile-modo-noct-01.png" />
+    <link rel="stylesheet" href="css/styles.min.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div class="line"></div>
+    <header>
+      <div class="containerHeader">
+        <a href="#"
+          ><img class="imgLogo" src="img/logo-mobile.png" alt="logo"
+        /></a>
+        <img src="img/burger.svg" alt="burger-mobile" class="menu" />
+      </div>
+      <nav class="nav">
+        <ul>
+          <li>
+            <a id="modoDark" class="links" href="#">Modo Nocturno</a>
+            <div class="lineNav"></div>
+          </li>
+          <li>
+            <a id="favoritos" class="links" href="fav.html">Favoritos</a>
+            <div class="lineNav"></div>
+          </li>
+          <li>
+            <a class="links" href="gifos.html">Mis GIFOS</a>
+            <div class="lineNav"></div>
+          </li>
+          <li id="btnCreateGif">
+            <a href="createGifos.html">
+              <img src="img/button-crear-gifo.svg" alt="btnCrearGif" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <!-- search-section -->
+      <section class="search-section">
+        <div class="containerTitleImg">
+          <h1>
+            Inspírate, busca, guarda, y crea los mejores
+            <span class="blueLetter">GIFOS</span>
+          </h1>
+          <img src="img/ilustra_header.svg" alt="imgen" />
+        </div>
+
+        <div class="containerInput">
+          <input id="input" type="text" placeholder="Busca GIFOS y más" />
+          <img class="lupa" src="img/icon-search.svg" alt="lupa" />
+        </div>
+      </section>
+
+      <!-- trending-section -->
+      <section class="suggestions-section">
+        <h2>Trending:</h2>
+        <div id="words"></div>
+        <!-- <p>Reactions, Entertainment, Sports, Stickers, Artists</p> -->
+      </section>
+
+      <!-- GIFS SEARCH  -->
+      <section class="gifs-section">
+        <div class="line"></div>
+        <h2 id="valueSearch"></h2>
+        <div id="containerGifsSearch"></div>
+        <div id="btnSeeMore"><a>VER MÁS</a></div>
+      </section>
+
+      <!-- trending-section-Api -->
+      <section class="trending-section">
+        <h2>Trending GIFOS</h2>
+        <p>Mira los últimos</p>
+        <p/>GIFOS de nuestra comunidad.</p>
+        <p id="pDesktop">Mira los últimos GIFOS de nuestra comunidad.</pid>
+        <div id="gifsTrending">
+          <div class="containerArrow">
+            <img
+              class="arrow"
+              id="izq"
+              src="img/button-slider-left.svg"
+              alt="flechaIzq"
+            />
+          </div>
+
+          <div id="containerGifsTrending"></div>
+
+          <div class="containerArrow">
+            <img
+              class="arrow"
+              id="der"
+              src="img/Button-Slider-right.svg"
+              alt="flechaDer"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div id="redes">
+        <p>Compartir en:</p>
+        <a href="https://www.facebook.com/" target="_blank">
+          <img id="facebook" src="img/icon_facebook.svg" alt="icon_facebook" />
+        </a>
+        <a href="https://twitter.com/" target="_blank">
+          <img id="twitter" src="img/icon-twitter.svg" alt="icon_facebook" />
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+          <img
+            id="instagram"
+            src="img/icon_instagram.svg"
+            alt="icon_facebook"
+          />
+        </a>
+      </div>
+      <p id="derechosR">© GIFOS 2020 All Rights Reserved.</p>
+    </footer>
+
+    <div class="line"></div> 
+
+    <script src="js/functions.js"></script>
+    <script src="js/trendingGifs.js"></script>
+    <script src="js/searchGifs.js"></script>
+    <script src="js/suggestedWords.js"></script>
+    <script src="js/burgerMenu.js"></script>
+    <script src="js/darkMode.js"></script>
+  </body>
+</html>
