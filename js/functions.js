@@ -75,7 +75,13 @@ function drawGifs(contenedor, gifos) {
     }
 
     imgFav.addEventListener("click", () => {
+      const found = favList.findIndex((elemento) => elemento.id === gifos[i].id);
       saveFav(gifos[i]);
+      if (found !== -1) {
+        imgFav.src = "img/icon-fav.svg";
+      } else {
+        imgFav.src = "img/icon-fav-active.svg";
+      }      
     });
     imgDow.addEventListener("click", () => {
       downloadGif(gifos[i].images.original.url, gifos[i].title);
@@ -97,7 +103,6 @@ function busqueda(value) {
     )
       .then((reponse) => reponse.json())
       .then((json) => {
-        console.log(json.data);
         drawGifs(containerGifsSearch, json.data);
       })
       .catch((error) => console.error(error));
@@ -122,6 +127,7 @@ function downloadGif(url, name) {
 }
 
 function saveFav(gifo) {
+  
   const found = favList.find((elemento) => elemento.id === gifo.id);
   if (found === undefined) {
     favList.push(gifo);
@@ -160,27 +166,22 @@ function apiWords() {
 
       word0.addEventListener("click", (e) => {
         e.preventDefault();
-        console.log(word0.innerHTML);
         busqueda(word0.innerHTML);
       });
       word1.addEventListener("click", (e) => {
         e.preventDefault();
-        console.log(word1.innerHTML);
         busqueda(word1.innerHTML);
       });
       word2.addEventListener("click", (e) => {
         e.preventDefault();
-        console.log(word2.innerHTML);
         busqueda(word2.innerHTML);
       });
       word3.addEventListener("click", (e) => {
         e.preventDefault();
-        console.log(word3.innerHTML);
         busqueda(word3.innerHTML);
       });
       word4.addEventListener("click", (e) => {
         e.preventDefault();
-        console.log(word4.innerHTML);
         busqueda(word4.innerHTML);
       });
     });
@@ -202,13 +203,13 @@ function contentChange(value) {
       title.classList.toggle("display-none");
       paragraph1.classList.toggle("display-none");
       paragraph2.classList.toggle("display-none");
-      
+
       break;
     case 3:
       number2.style = "background: #fff; color: #572EE5";
       number3.style = "background: #572EE5; color: #fff";
       // video.classList.toggle("display-none");
-      
+
       break;
     default:
       break;
