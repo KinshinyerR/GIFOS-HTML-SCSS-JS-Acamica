@@ -8,19 +8,12 @@ const number3 = document.getElementById("number3");
 
 const video = document.getElementById("video");
 const btnStart = document.getElementById("btnStart");
+
 const key = "IiIY2wGSJZqSqezBTIxgg2kEsVdCq2P5";
 let recorder;
+let isActive;
 let form = new FormData();
 let myGifs = [];
-
-getStreamAndRecord();
-
-// number1.addEventListener("click", () => contentChange(number1, 1));
-// number2.addEventListener("click", () => {
-//   getStreamAndRecord();
-//   contentChange(number2, 2);
-// });
-// number3.addEventListener("click", () => contentChange(number3, 3));
 
 function getStreamAndRecord() {
   navigator.mediaDevices
@@ -31,6 +24,7 @@ function getStreamAndRecord() {
       },
     })
     .then(function (stream) {
+      isActive = stream.active;
       video.srcObject = stream;
       video.play();
       recorder = RecordRTC(stream, {
@@ -43,29 +37,56 @@ function getStreamAndRecord() {
           console.log("started");
         },
       });
-      btnStart.addEventListener("click", (e) => {
-        e.preventDefault();
-        contentChange(number1, 1);
-        setTimeout(() => {
-          contentChange(number2, 2);
-          recorder.startRecording();
-          setTimeout(() => {
-            contentChange(number3, 3);
-            recorder.stopRecording(function () {
-              let blob = recorder.getBlob();
-              form.append("file", blob, "myGif.gif");
-              // invokeSaveAsDialog(blob);
-              uploadFile(form);
-            });
-          }, 5000);
-        }, 5000);
-      });
+      if (isActive) {
+        contentChange(2);
+      }
     })
     .catch((err) => {
       console.log(err);
     });
 }
+btnStart.addEventListener("click", async (e) => {
+  e.preventDefault();
+  switch (btnStart.innerText) {
+    case "COMENZAR":
+      contentChange(1);
+      getStreamAndRecord();
+      break;
+    case "GRABAR":
+      recorder.startRecording();
+      btnStart.textContent = "FINALIZAR";
+      break;
+    case "FINALIZAR":
+      contentChange(3);
+      recorder.stopRecording(function () {
+        let blob = recorder.getBlob();
+        form.append("file", blob, "myGif.gif");
+        // invokeSaveAsDialog(blob);
+      });
+      btnStart.textContent = "SUBIR GIFO";
+      break;
+    case "SUBIR GIFO":
+      uploadFile(form);
+      btnStart.classList.toggle('display-none')
+      break;
+    default:
+      break;
+  }
 
+  // setTimeout(() => {
+  //   contentChange(2);
+  //   recorder.startRecording();
+  //   setTimeout(() => {
+  //     contentChange(3);
+  //     recorder.stopRecording(function () {
+  //       let blob = recorder.getBlob();
+  //       form.append("file", blob, "myGif.gif");
+  //       // invokeSaveAsDialog(blob);
+  //       uploadFile(form);
+  //     });
+  //   }, 5000);
+  // }, 5000);
+});
 function uploadFile(file) {
   fetch(`https://upload.giphy.com/v1/gifs?api_key=${key}`, {
     method: "POST",

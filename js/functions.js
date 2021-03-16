@@ -186,32 +186,29 @@ function apiWords() {
     });
 }
 
-function contentChange(number, value) {
+function contentChange(value) {
   switch (value) {
     case 1:
       number1.style = "background: #572EE5; color: #fff";
       title.textContent = "¿Nos das acceso a tu cámara?";
       paragraph1.textContent = "El acceso a tu camara será válido sólo";
       paragraph2.textContent = "por el tiempo en el que estés creando el GIFO.";
+      btnStart.textContent = "GRABAR";
       break;
     case 2:
       number1.style = "background: #fff; color: #572EE5";
       number2.style = "background: #572EE5; color: #fff";
       video.classList.toggle("display-none");
-      title.classList.add("display-none");
-      paragraph1.classList.add("display-none");
-      paragraph2.classList.add("display-none");
+      title.classList.toggle("display-none");
+      paragraph1.classList.toggle("display-none");
+      paragraph2.classList.toggle("display-none");
+      
       break;
     case 3:
       number2.style = "background: #fff; color: #572EE5";
       number3.style = "background: #572EE5; color: #fff";
       // video.classList.toggle("display-none");
-      title.classList.toggle("display-none");
-      paragraph1.classList.toggle("display-none");
-      paragraph2.classList.toggle("display-none");
-      title.textContent = "Caso 3";
-      paragraph1.textContent = "";
-      paragraph2.textContent = "";
+      
       break;
     default:
       break;
