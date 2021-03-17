@@ -68,7 +68,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
     .containerTitleImg {
       h1 {
         font-family: "Montserrat", Bold;
@@ -87,34 +87,61 @@ main {
         height: 130px;
       }
     }
-    .containerInput {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      margin: -5px;
-      #input {
-        font-family: "Roboto", Regular;
-        border: 1px solid $purple;
-        border-radius: 27px;
-        background: $white;
-        font-size: 16px;
-        font-weight: 400;
-        text-align: left;
-        margin: 0 20px;
-        height: 50px;
-        width: 100%;
-        outline: none;
-        padding-left: 30px;
-        #input::placeholder {
-          color: #6b7989;
+
+    .containerSearch {
+      background: $white;
+      border: 1px solid $purple;
+      border-radius: 27px;
+      height: 50px;
+      margin: -5px 20px;
+      .containerInput {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1px;
+        input {
+          font-family: "Roboto", Regular;
+          background: transparent;
+          font-size: 16px;
+          font-weight: 400;
+          width: 85%;
+          height: 45px;
+          outline: none;
+          border: 0 none transparent;
+          &::placeholder {
+            color: #6b7989;
+          }
         }
       }
-      .lupa {
-        position: absolute;
-        right: 35px;
-        z-index: 2;
-      }
     }
+    // .containerInput {
+    //   display: flex;
+    //   align-items: center;
+    //   width: 100%;
+    //   margin: -5px;
+    //   #input {
+    //     font-family: "Roboto", Regular;
+    //     border: 1px solid $purple;
+    //     border-radius: 27px;
+    //     background: $white;
+    //     font-size: 16px;
+    //     font-weight: 400;
+    //     text-align: left;
+    //     margin: 0 20px;
+    //     height: 50px;
+    //     width: 100%;
+    //     outline: none;
+    //     padding-left: 30px;
+    //     #input::placeholder {
+    //       color: #6b7989;
+    //     }
+    //   }
+    //   .lupa {
+    //     position: absolute;
+    //     right: 35px;
+    //     z-index: 2;
+    //   }
+    // }
   }
 
   .suggestions-section {

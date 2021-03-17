@@ -89,16 +89,26 @@ $aqua: #50e3c2;
           height: 190px;
         }
       }
-      .containerInput {
+
+      .containerSearch {
         width: 551px;
-        margin: auto;
-        #input {
-          margin: -10px auto;
-        }
-        .lupa {
-          left: 915px;
+        margin: -5px auto;
+        .containerInput {
+          input {
+              width: 90%;
+          }
         }
       }
+      // .containerInput {
+      //   width: 551px;
+      //   margin: auto;
+      //   #input {
+      //     margin: -10px auto;
+      //   }
+      //   .lupa {
+      //     left: 915px;
+      //   }
+      // }
     }
     .suggestions-section {
       padding-top: 4.8%;

@@ -183,17 +183,16 @@ body.dark main .search-section .containerTitleImg h1 {
   color: #ffffff;
 }
 
-body.dark main .search-section .containerInput #input {
+body.dark main .search-section .containerSearch {
   border: 1px solid #ffffff;
   background: #37383c;
+}
+
+body.dark main .search-section .containerSearch .containerInput #input {
   color: #ffffff;
 }
 
-body.dark main .search-section .containerInput #input #input::placeholder {
-  color: #ffffff;
-}
-
-body.dark main .search-section .containerInput .lupa {
+body.dark main .search-section .containerSearch .containerInput .lupa {
   content: url("/img/icon-search-mod-noc.svg");
 }
 
@@ -340,15 +339,14 @@ body.dark footer {
   body.dark main .search-section .containerTitleImg h1 {
     color: #ffffff;
   }
-  body.dark main .search-section .containerInput #input {
+  body.dark main .search-section .containerSearch {
     border: 1px solid #ffffff;
     background: #37383c;
+  }
+  body.dark main .search-section .containerSearch .containerInput #input {
     color: #ffffff;
   }
-  body.dark main .search-section .containerInput #input #input::placeholder {
-    color: #ffffff;
-  }
-  body.dark main .search-section .containerInput .lupa {
+  body.dark main .search-section .containerSearch .containerInput .lupa {
     content: url("/img/icon-search-mod-noc.svg");
   }
   body.dark main .gifs-section .line {
@@ -476,7 +474,6 @@ main .search-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 main .search-section .containerTitleImg h1 {
@@ -498,36 +495,34 @@ main .search-section .containerTitleImg img {
   height: 130px;
 }
 
-main .search-section .containerInput {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin: -5px;
-}
-
-main .search-section .containerInput #input {
-  font-family: "Roboto", Regular;
+main .search-section .containerSearch {
+  background: #ffffff;
   border: 1px solid #572ee5;
   border-radius: 27px;
-  background: #ffffff;
+  height: 50px;
+  margin: -5px 20px;
+}
+
+main .search-section .containerSearch .containerInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1px;
+}
+
+main .search-section .containerSearch .containerInput input {
+  font-family: "Roboto", Regular;
+  background: transparent;
   font-size: 16px;
   font-weight: 400;
-  text-align: left;
-  margin: 0 20px;
-  height: 50px;
-  width: 100%;
+  width: 85%;
+  height: 45px;
   outline: none;
-  padding-left: 30px;
+  border: 0 none transparent;
 }
 
-main .search-section .containerInput #input #input::placeholder {
+main .search-section .containerSearch .containerInput input::placeholder {
   color: #6b7989;
-}
-
-main .search-section .containerInput .lupa {
-  position: absolute;
-  right: 35px;
-  z-index: 2;
 }
 
 main .suggestions-section {
@@ -798,15 +793,12 @@ footer #derechosR {
     content: url("../img/ilustra_header.svg");
     height: 190px;
   }
-  main .search-section .containerInput {
+  main .search-section .containerSearch {
     width: 551px;
-    margin: auto;
+    margin: -5px auto;
   }
-  main .search-section .containerInput #input {
-    margin: -10px auto;
-  }
-  main .search-section .containerInput .lupa {
-    left: 915px;
+  main .search-section .containerSearch .containerInput input {
+    width: 90%;
   }
   main .suggestions-section {
     padding-top: 4.8%;

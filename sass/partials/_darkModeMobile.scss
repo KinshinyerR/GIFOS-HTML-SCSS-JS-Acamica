@@ -61,17 +61,16 @@ body.dark {
           color: $white;
         }
       }
-      .containerInput {
-        #input {
-          border: 1px solid $white;
-          background: $grayLight;
-          color: $white;
-          #input::placeholder {
+      .containerSearch {
+        border: 1px solid $white;
+        background: $grayLight;
+        .containerInput {
+          #input {
             color: $white;
           }
-        }
-        .lupa {
-          content: url("/img/icon-search-mod-noc.svg");
+          .lupa {
+            content: url("/img/icon-search-mod-noc.svg");
+          }
         }
       }
     }
@@ -92,7 +91,7 @@ body.dark {
     }
     .suggestions-section {
       h2,
-      a{
+      a {
         color: $white;
       }
     }
