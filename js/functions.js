@@ -241,3 +241,22 @@ function chronometer() {
 
   label.textContent = `${hours}:${minutes}:${seconds}`;
 }
+
+function suggested(term) {
+  fetch(
+    `https://api.giphy.com/v1/tags/related/${term}?api_key=IiIY2wGSJZqSqezBTIxgg2kEsVdCq2P5`
+  )
+    .then((response) => response.json())
+    .then((json) => {
+      response = json.data;
+      console.log(response);
+      containerSuggested.innerHTML = "";
+      response.forEach((word) => {
+        const term = document.createElement("li");
+        term.innerText = word.name;
+        term.tabIndex = 0;
+        containerSuggested.appendChild(term);
+      });
+    })
+    .catch((error) => console.log(error));
+}
