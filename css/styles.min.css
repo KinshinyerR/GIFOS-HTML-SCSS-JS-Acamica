@@ -499,8 +499,9 @@ main .search-section .containerSearch {
   background: #ffffff;
   border: 1px solid #572ee5;
   border-radius: 27px;
-  height: 50px;
   margin: -5px 20px;
+  max-height: 210px;
+  overflow: hidden;
 }
 
 main .search-section .containerSearch .containerInput {
@@ -523,6 +524,29 @@ main .search-section .containerSearch .containerInput input {
 
 main .search-section .containerSearch .containerInput input::placeholder {
   color: #6b7989;
+}
+
+main .search-section .containerSearch .line {
+  margin: 0 auto;
+  width: 250px;
+  height: 2px;
+  opacity: 50%;
+  border: 1px solid #9cafc3;
+}
+
+main .search-section .containerSearch .containerSuggested li {
+  font-family: "Roboto", Regular;
+  font-size: 16px;
+  color: #9cafc3;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+main .search-section .containerSearch .containerSuggested li .lupa {
+  width: 15.8px;
+  height: 15.8px;
+  margin: 7.5px 10px 7.5px 23.6px;
 }
 
 main .suggestions-section {
@@ -551,11 +575,11 @@ main .suggestions-section a {
 }
 
 main .suggestions-section a:first-child:before {
-  content: '';
+  content: "";
 }
 
 main .suggestions-section a::before {
-  content: ', ';
+  content: ", ";
 }
 
 main .gifs-section {
@@ -799,6 +823,9 @@ footer #derechosR {
   }
   main .search-section .containerSearch .containerInput input {
     width: 90%;
+  }
+  main .search-section .containerSearch .line {
+    width: 505px;
   }
   main .suggestions-section {
     padding-top: 4.8%;

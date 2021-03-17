@@ -242,20 +242,36 @@ function chronometer() {
   label.textContent = `${hours}:${minutes}:${seconds}`;
 }
 
-function suggested(term) {
+function suggested(palabra) {
   fetch(
-    `https://api.giphy.com/v1/tags/related/${term}?api_key=IiIY2wGSJZqSqezBTIxgg2kEsVdCq2P5`
+    `https://api.giphy.com/v1/tags/related/${palabra}?api_key=IiIY2wGSJZqSqezBTIxgg2kEsVdCq2P5`
   )
     .then((response) => response.json())
     .then((json) => {
       response = json.data;
-      console.log(response);
       containerSuggested.innerHTML = "";
       response.forEach((word) => {
-        const term = document.createElement("li");
+        const li = document.createElement("li");
+        li.classList.add("sug");
+        const lup = document.createElement("img");
+        lup.src = "img/icon-search-grey.svg";
+        lup.alt = "lupa";
+        lup.classList.add("lupa");
+        const term = document.createElement("a");
         term.innerText = word.name;
         term.tabIndex = 0;
-        containerSuggested.appendChild(term);
+
+        li.appendChild(lup);
+        li.appendChild(term);
+        containerSuggested.appendChild(li);
+
+        term.addEventListener("click", () => {
+          input.value = term.innerText;
+          line.classList.toggle('display-none');
+          containerSuggested.classList.toggle('display-none')
+          lupa.src = 'img/icon-search.svg'
+          busqueda(input.value)
+        });
       });
     })
     .catch((error) => console.log(error));

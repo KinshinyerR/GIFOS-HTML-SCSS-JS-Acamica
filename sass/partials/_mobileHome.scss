@@ -92,8 +92,9 @@ main {
       background: $white;
       border: 1px solid $purple;
       border-radius: 27px;
-      height: 50px;
       margin: -5px 20px;
+      max-height: 210px;
+      overflow: hidden;
       .containerInput {
         display: flex;
         justify-content: center;
@@ -110,6 +111,28 @@ main {
           border: 0 none transparent;
           &::placeholder {
             color: #6b7989;
+          }
+        }
+      }
+      .line {
+        margin: 0 auto;
+        width: 250px;
+        height: 2px;
+        opacity: 50%;
+        border: 1px solid #9cafc3;
+      }
+      .containerSuggested {
+        li {
+          font-family: "Roboto", Regular;
+          font-size: 16px;
+          color: #9cafc3;
+          list-style: none;
+          display: flex;
+          align-items: center;
+          .lupa {
+            width: 15.8px;
+            height: 15.8px;
+            margin: 7.5px 10px 7.5px 23.6px;
           }
         }
       }
@@ -165,11 +188,11 @@ main {
       color: $purple;
       margin: 0 2px;
     }
-    a:first-child:before{
-      content: '';
+    a:first-child:before {
+      content: "";
     }
-    a::before{
-      content: ', ';
+    a::before {
+      content: ", ";
     }
   }
 
@@ -260,7 +283,7 @@ main {
       font-weight: 500;
       transition: 1s ease all;
     }
-    #pDesktop{
+    #pDesktop {
       display: none;
     }
     #gifsTrending {
