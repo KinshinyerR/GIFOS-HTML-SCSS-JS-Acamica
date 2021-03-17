@@ -75,13 +75,15 @@ function drawGifs(contenedor, gifos) {
     }
 
     imgFav.addEventListener("click", () => {
-      const found = favList.findIndex((elemento) => elemento.id === gifos[i].id);
+      const found = favList.findIndex(
+        (elemento) => elemento.id === gifos[i].id
+      );
       saveFav(gifos[i]);
       if (found !== -1) {
         imgFav.src = "img/icon-fav.svg";
       } else {
         imgFav.src = "img/icon-fav-active.svg";
-      }      
+      }
     });
     imgDow.addEventListener("click", () => {
       downloadGif(gifos[i].images.original.url, gifos[i].title);
@@ -127,7 +129,6 @@ function downloadGif(url, name) {
 }
 
 function saveFav(gifo) {
-  
   const found = favList.find((elemento) => elemento.id === gifo.id);
   if (found === undefined) {
     favList.push(gifo);
@@ -199,19 +200,44 @@ function contentChange(value) {
     case 2:
       number1.style = "background: #fff; color: #572EE5";
       number2.style = "background: #572EE5; color: #fff";
+      number3.style = "background: #fff; color: #572EE5";
       video.classList.toggle("display-none");
-      title.classList.toggle("display-none");
-      paragraph1.classList.toggle("display-none");
-      paragraph2.classList.toggle("display-none");
-
+      title.classList.add("display-none");
+      paragraph1.classList.add("display-none");
+      paragraph2.classList.add("display-none");
       break;
     case 3:
       number2.style = "background: #fff; color: #572EE5";
       number3.style = "background: #572EE5; color: #fff";
-      // video.classList.toggle("display-none");
-
       break;
     default:
       break;
   }
+}
+
+let timer;
+let hours = "00";
+let minutes = "00";
+let seconds = "00";
+
+function chronometer() {
+  seconds++;
+
+  if (seconds < 10) seconds = `0` + seconds;
+
+  if (seconds > 59) {
+    seconds = `00`;
+    minutes++;
+
+    if (minutes < 10) minutes = `0` + minutes;
+  }
+
+  if (minutes > 59) {
+    minutes = `00`;
+    hours++;
+
+    if (hours < 10) hours = `0` + hours;
+  }
+
+  label.textContent = `${hours}:${minutes}:${seconds}`;
 }

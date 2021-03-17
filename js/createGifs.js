@@ -7,7 +7,12 @@ const number2 = document.getElementById("number2");
 const number3 = document.getElementById("number3");
 
 const video = document.getElementById("video");
+const label = document.getElementById("label");
+const hover = document.getElementById("hover");
 const btnStart = document.getElementById("btnStart");
+const check = document.getElementById("check");
+const paragraph = document.getElementById("paragraph");
+const spinner = document.querySelector(".spinner");
 
 const key = "IiIY2wGSJZqSqezBTIxgg2kEsVdCq2P5";
 let recorder;
@@ -55,37 +60,43 @@ btnStart.addEventListener("click", async (e) => {
     case "GRABAR":
       recorder.startRecording();
       btnStart.textContent = "FINALIZAR";
+      timer = setInterval(chronometer, 1000);
       break;
     case "FINALIZAR":
       contentChange(3);
+      clearInterval(timer);
+      label.textContent = "REPETIR CAPTURA";
       recorder.stopRecording(function () {
         let blob = recorder.getBlob();
         form.append("file", blob, "myGif.gif");
         // invokeSaveAsDialog(blob);
       });
+      video.pause();
       btnStart.textContent = "SUBIR GIFO";
+      label.addEventListener("click", () => {
+        video.classList.toggle("display-none");
+        video.play();
+        btnStart.textContent = "GRABAR";
+        label.textContent = "";
+        seconds = "00";
+        contentChange(2);
+      });
       break;
     case "SUBIR GIFO":
       uploadFile(form);
-      btnStart.classList.toggle('display-none')
+      hover.classList.add("active");
+      label.classList.toggle('display-none')
+      setTimeout(() => {
+        setTimeout(() => {
+          check.classList.toggle('display-none')
+        }, 50);
+        spinner.classList.add("display-none");
+        paragraph.textContent = 'GIFO subido con éxito';
+      }, 12000);
       break;
     default:
       break;
   }
-
-  // setTimeout(() => {
-  //   contentChange(2);
-  //   recorder.startRecording();
-  //   setTimeout(() => {
-  //     contentChange(3);
-  //     recorder.stopRecording(function () {
-  //       let blob = recorder.getBlob();
-  //       form.append("file", blob, "myGif.gif");
-  //       // invokeSaveAsDialog(blob);
-  //       uploadFile(form);
-  //     });
-  //   }, 5000);
-  // }, 5000);
 });
 function uploadFile(file) {
   fetch(`https://upload.giphy.com/v1/gifs?api_key=${key}`, {

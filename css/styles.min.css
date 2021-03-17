@@ -1154,6 +1154,17 @@ main .misGifos .btnSeeMore:hover a {
   }
 }
 
+@keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
 .createGifo .createDiv {
   display: flex;
   flex-direction: row;
@@ -1196,6 +1207,60 @@ main .misGifos .btnSeeMore:hover a {
   line-height: 29px;
 }
 
+.createGifo .createDiv .spaceCamera video {
+  width: 480px;
+  height: 320px;
+}
+
+.createGifo .createDiv .spaceCamera #hover #check {
+  width: 24px;
+  height: 24px;
+  margin: auto auto 0;
+}
+
+.createGifo .createDiv .spaceCamera #hover #paragraph {
+  font-family: "Montserrat", Bold;
+  font-size: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 120px;
+}
+
+.createGifo .createDiv .spaceCamera #hover.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  opacity: 0.7;
+  background: #572ee5;
+  width: 392px;
+  height: 320px;
+}
+
+.createGifo .createDiv .spaceCamera #hover.active .spinner {
+  margin: 150px auto 0;
+  width: 70px;
+  text-align: center;
+}
+
+.createGifo .createDiv .spaceCamera #hover.active .spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #50e3c2;
+  border-radius: 100%;
+  display: inline-block;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.createGifo .createDiv .spaceCamera #hover.active .spinner .bounce1 {
+  animation-delay: -0.32s;
+}
+
+.createGifo .createDiv .spaceCamera #hover.active .spinner .bounce2 {
+  animation-delay: -0.16s;
+}
+
 .createGifo .createNumbers {
   display: flex;
   align-items: center;
@@ -1234,6 +1299,24 @@ main .misGifos .btnSeeMore:hover a {
   animation-duration: 5s;
   animation-name: move;
   animation-iteration-count: initial;
+}
+
+.createGifo .createNumbers #label {
+  position: absolute;
+  left: 66%;
+  font-family: "Montserrat", Bold;
+  font-size: 15px;
+  color: #572ee5;
+  letter-spacing: 0;
+  line-height: 22px;
+  margin-top: 5px;
+  font-weight: 700;
+}
+
+.createGifo .createNumbers #label:hover {
+  text-decoration-line: underline;
+  text-decoration-color: #5ed7c6;
+  text-decoration-thickness: 2px;
 }
 
 .createGifo .createNumbers .lineCreate {
