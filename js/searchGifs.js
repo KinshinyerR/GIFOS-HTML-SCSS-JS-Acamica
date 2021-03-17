@@ -6,7 +6,7 @@ const valueSearch = document.querySelector("#valueSearch");
 let btnVerMas = document.querySelector("#btnSeeMore");
 const containerSuggested = document.getElementById('containerSuggested');
 
-btnVerMas.addEventListener("input", seeMore);
+btnVerMas.addEventListener("click", seeMore);
 
 input.addEventListener("keypress", (e) => {
   if (modoStorage === "dark") {
