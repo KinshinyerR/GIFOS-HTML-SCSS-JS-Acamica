@@ -44,7 +44,6 @@ close.addEventListener("click", () => {
 
 function slider(contenedor, img, indice, gifos) {
   cont = indice;
-  console.log(cont);
   imagen.src = img[cont];
   updateInfo(gifos);
   contenedor.addEventListener("click", (e) => {
