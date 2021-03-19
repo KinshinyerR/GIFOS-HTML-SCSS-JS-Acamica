@@ -29,6 +29,8 @@ input.addEventListener("keypress", (e) => {
   }
   if (e.code === "Enter") {
     lupa.src = 'img/icon-search.svg'
+    line.classList.add('display-none')
+    containerSuggested.classList.add('display-none')
     busqueda(input.value);
   }
 });

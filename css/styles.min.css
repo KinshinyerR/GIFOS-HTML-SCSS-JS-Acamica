@@ -121,6 +121,85 @@
   }
 }
 
+body .modal-section {
+  display: none;
+}
+
+body .modal-section.active {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  flex-direction: column;
+}
+
+body .modal-section .info {
+  display: flex;
+  margin-top: 27px;
+  width: 50%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body .modal-section .info .infoGif {
+  font-family: "Roboto", Regular;
+  color: #000000;
+}
+
+body .modal-section .info .infoGif .title {
+  font-size: 15px;
+}
+
+body .modal-section .info .infoGif .paragraph {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+body .modal-section .modalGif {
+  display: flex;
+  align-items: center;
+}
+
+body .modal-section .modalGif .close {
+  position: absolute;
+  right: 200px;
+  top: 90px;
+}
+
+body .modal-section .modalGif #imagen {
+  width: 695px;
+  height: 385px;
+  object-fit: fill;
+}
+
+body .modal-section .modalGif .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #572ee5;
+  background-color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+  color: #572ee5;
+  margin: 25px;
+  transition: all 0.3s ease;
+}
+
+body .modal-section .modalGif .btn:hover {
+  cursor: pointer;
+  background-color: #572ee5;
+  color: #ffffff;
+  transform: scale(1.2, 1.2);
+}
+
 /********************************VARIABLES***************************************/
 /********************************body***************************************/
 body.dark {

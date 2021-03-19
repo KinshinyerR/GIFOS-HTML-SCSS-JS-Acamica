@@ -2,6 +2,8 @@ let numeroDeGifs = 24;
 let word;
 let favList = [];
 let modoStorage = localStorage.getItem("modo");
+let arraySearch = [];
+let searchGifs;
 
 if (localStorage.getItem("favList")) {
   favList = JSON.parse(localStorage.getItem("favList"));
@@ -88,13 +90,22 @@ function drawGifs(contenedor, gifos) {
     imgDow.addEventListener("click", () => {
       downloadGif(gifos[i].images.original.url, gifos[i].title);
     });
-    imgMax.addEventListener("click", () => {});
+    imgMax.addEventListener("click", () => {
+      const found = trendingGifs[i].id == gifos[i].id;
+      if (found === true) {
+        slider(modal, arrayTrending, i, gifos);
+      } else {
+        slider(modal, arraySearch, i, gifos);
+      }
+      modal.classList.toggle("active");
+    });
 
     contenedor.appendChild(containerGif);
   }
 }
 
 function busqueda(value) {
+  arraySearch = [];
   if (value.length > 0) {
     gifsSection.classList.add("active");
     valueSearch.textContent = value;
@@ -105,7 +116,20 @@ function busqueda(value) {
     )
       .then((reponse) => reponse.json())
       .then((json) => {
-        drawGifs(containerGifsSearch, json.data);
+        searchGifs = json.data;
+        drawGifs(containerGifsSearch, searchGifs);
+        for (let i = 0; i < searchGifs.length; i++) {
+          arraySearch.push(
+            searchGifs[i].images?.preview_webp?.url
+              ? searchGifs[i].images.preview_webp.url
+              : searchGifs[i].images.original.url
+          );
+          // console.log(
+          //   trendingGifs[i].images?.preview_webp?.url
+          //     ? trendingGifs[i].images.preview_webp.url
+          //     : trendingGifs[i].images.original.url
+          // );
+        }
       })
       .catch((error) => console.error(error));
     input.value = "";
@@ -267,10 +291,10 @@ function suggested(palabra) {
 
         term.addEventListener("click", () => {
           input.value = term.innerText;
-          line.classList.toggle('display-none');
-          containerSuggested.classList.toggle('display-none')
-          lupa.src = 'img/icon-search.svg'
-          busqueda(input.value)
+          line.classList.toggle("display-none");
+          containerSuggested.classList.toggle("display-none");
+          lupa.src = "img/icon-search.svg";
+          busqueda(input.value);
         });
       });
     })
