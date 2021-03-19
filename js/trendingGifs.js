@@ -19,7 +19,6 @@ fetch(`https://api.giphy.com/v1/gifs/trending?api_key=${key}&limit=12`)
   .then((response) => response.json())
   .then((json) => {
     trendingGifs = json.data;
-    console.log(trendingGifs);
     drawGifs(gifs, trendingGifs);
     for (let i = 0; i < trendingGifs.length; i++) {
       arrayTrending.push(
@@ -27,11 +26,6 @@ fetch(`https://api.giphy.com/v1/gifs/trending?api_key=${key}&limit=12`)
           ? trendingGifs[i].images.preview_webp.url
           : trendingGifs[i].images.original.url
       );
-      // console.log(
-      //   trendingGifs[i].images?.preview_webp?.url
-      //     ? trendingGifs[i].images.preview_webp.url
-      //     : trendingGifs[i].images.original.url
-      // );
     }
   })
   .catch((error) => console.log(error));

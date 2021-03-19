@@ -124,11 +124,6 @@ function busqueda(value) {
               ? searchGifs[i].images.preview_webp.url
               : searchGifs[i].images.original.url
           );
-          // console.log(
-          //   trendingGifs[i].images?.preview_webp?.url
-          //     ? trendingGifs[i].images.preview_webp.url
-          //     : trendingGifs[i].images.original.url
-          // );
         }
       })
       .catch((error) => console.error(error));
