@@ -3,7 +3,7 @@ const arrowDer = document.getElementById("der");
 const gifs = document.getElementById("containerGifsTrending");
 
 
-const key = "IiIY2wGSJZqSqezBTIxgg2kEsVdCq2P5";
+// const key = "IiIY2wGSJZqSqezBTIxgg2kEsVdCq2P5";
 
 let arrayTrending = [];
 

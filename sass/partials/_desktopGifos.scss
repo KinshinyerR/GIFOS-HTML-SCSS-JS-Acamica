@@ -33,6 +33,25 @@ $aqua: #50e3c2;
       .btnSeeMore {
         display: none;
       }
+      #containerMisGifs {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 110px;
+        .containerGif {
+          padding: 0;
+          .hoverImg {
+            width: 255px;
+            height: 200px;
+            margin: 10px;
+          }
+          #imgGif {
+            width: 255px;
+            height: 200px;
+            object-fit: fill;
+            margin: 10px;
+          }
+        }
+      }
     }
   }
 }

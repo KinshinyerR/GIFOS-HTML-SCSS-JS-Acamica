@@ -14,11 +14,9 @@ const check = document.getElementById("check");
 const paragraph = document.getElementById("paragraph");
 const spinner = document.querySelector(".spinner");
 
-const key = "IiIY2wGSJZqSqezBTIxgg2kEsVdCq2P5";
 let recorder;
 let isActive;
 let form = new FormData();
-let myGifs = [];
 
 function getStreamAndRecord() {
   navigator.mediaDevices
@@ -101,13 +99,12 @@ btnStart.addEventListener("click", async (e) => {
 function uploadFile(file) {
   fetch(`https://upload.giphy.com/v1/gifs?api_key=${key}`, {
     method: "POST",
-    body: file,
+    body:  file,
   })
     .then((response) => response.json())
     .then((json) => {
       console.log(json);
-      myGifs.push(json);
-      //   localStorage.setItem("MisGifs", JSON.stringify(myGifs));
+      saveGifos(json.data.id);
     })
     .catch((err) => {
       console.log(err);

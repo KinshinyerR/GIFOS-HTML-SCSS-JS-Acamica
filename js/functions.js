@@ -3,8 +3,9 @@ let word;
 let favList = [];
 let modoStorage = localStorage.getItem("modo");
 let arraySearch = [];
+let myGifs = [];
 let searchGifs;
-
+const key = "IiIY2wGSJZqSqezBTIxgg2kEsVdCq2P5";
 const modal = document.querySelector(".modal-section");
 let left = document.querySelector(".left");
 let right = document.querySelector(".right");
@@ -15,6 +16,9 @@ let cont = 0;
 
 if (localStorage.getItem("favList")) {
   favList = JSON.parse(localStorage.getItem("favList"));
+}
+if (localStorage.getItem("myGifs")) {
+  myGifs = JSON.parse(localStorage.getItem("myGifs"));
 }
 
 /************************* Dark Mode *****************************/
@@ -292,6 +296,14 @@ function suggested(palabra) {
         li.appendChild(term);
         containerSuggested.appendChild(li);
 
+        lup.addEventListener("click", () => {
+          input.value = term.innerText;
+          line.classList.toggle("display-none");
+          containerSuggested.classList.toggle("display-none");
+          lupa.src = "img/icon-search.svg";
+          busqueda(input.value);
+        });
+        
         term.addEventListener("click", () => {
           input.value = term.innerText;
           line.classList.toggle("display-none");
@@ -370,4 +382,14 @@ function updateInfo(gifos) {
   close.addEventListener("click", () => {
     modal.classList.toggle("active");
   });
+}
+
+function saveGifos(id) {
+  fetch(`https://api.giphy.com/v1/gifs/${id}?api_key=${key}`)
+    .then((response) => response.json())
+    .then((json) => {
+      console.log(json);
+      myGifs.push(json.data)
+      localStorage.setItem("myGifs", JSON.stringify(myGifs));
+    });
 }

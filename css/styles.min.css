@@ -869,7 +869,6 @@ footer #derechosR {
   header .nav ul li a:hover {
     text-decoration-line: underline;
     text-decoration-color: #5ed7c6;
-    text-decoration-thickness: 2px;
   }
   header .nav ul li a:active {
     text-decoration: none;
@@ -1244,6 +1243,25 @@ main .misGifos .btnSeeMore:hover a {
   main .misGifos .btnSeeMore {
     display: none;
   }
+  main .misGifos #containerMisGifs {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 110px;
+  }
+  main .misGifos #containerMisGifs .containerGif {
+    padding: 0;
+  }
+  main .misGifos #containerMisGifs .containerGif .hoverImg {
+    width: 255px;
+    height: 200px;
+    margin: 10px;
+  }
+  main .misGifos #containerMisGifs .containerGif #imgGif {
+    width: 255px;
+    height: 200px;
+    object-fit: fill;
+    margin: 10px;
+  }
 }
 
 @keyframes move {
@@ -1414,7 +1432,6 @@ main .misGifos .btnSeeMore:hover a {
 .createGifo .createNumbers #label:hover {
   text-decoration-line: underline;
   text-decoration-color: #5ed7c6;
-  text-decoration-thickness: 2px;
 }
 
 .createGifo .createNumbers .lineCreate {
